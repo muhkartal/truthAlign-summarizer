@@ -1,0 +1,22 @@
+version: "3.8"
+
+services:
+   factuality-summarization:
+      build:
+         context: .
+         dockerfile: Dockerfile
+      volumes:
+         - ./output:/app/output
+      ports:
+         - "8888:8888"
+      environment:
+         - NVIDIA_VISIBLE_DEVICES=all
+      deploy:
+         resources:
+            reservations:
+               devices:
+                  - driver: nvidia
+                    count: 1
+                    capabilities: [gpu]
+      command: >
+         bash -c "jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token='factuality'"
