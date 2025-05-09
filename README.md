@@ -291,7 +291,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <div align="center">
   <p>
     <strong>truthAlign-summarizer</strong>
-  </p>
+  </p>g
   <p>
     <a href="https://github.com/muhkartal/netsentry">GitHub</a> •
     <a href="https://hub.docker.com/r/muhkartal/netsentry">Docker Hub</a> •
